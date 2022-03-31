@@ -335,12 +335,15 @@ def main():
     forest = randomForestAlg(train_df, n_trees=4, n_bootstrap=len(train_df), n_features=999, dt_max_depth=4)
 
 
-    print(randomForestPred(test_df, forest))
     predictions = randomForestPred(test_df, forest)
 
     accuracy = calcAcc(predictions, test_df.label)
 
-    print(accuracy)
+    print("Accuracy of the model is: " + str(accuracy))
+
+    print("Predictions")
+    acc = calculateAccuracy(test_df,forest[0])
+    print(test_df)
 
     for i in range (len(forest)):
         pprint(forest[i])

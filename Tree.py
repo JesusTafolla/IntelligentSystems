@@ -320,9 +320,9 @@ def main():
     #print(train_df.dtypes)
 
     createPlot(train_df,tree,title="Trained Data")
-    plt.xlim(pd.to_numeric(0),pd.to_numeric(200))
+    #plt.xlim(pd.to_numeric(0),pd.to_numeric(200))
     createPlot(test_df,tree,title="Test Data")
-    plt.xlim(pd.to_numeric(0),pd.to_numeric(250))
+    #plt.xlim(pd.to_numeric(0),pd.to_numeric(250))
     #checkPurity(train_df[train_df.children<3])
     #classy = clasifyData(train_df[train_df.children < 3])
     #print(classy)

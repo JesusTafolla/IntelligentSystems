@@ -53,6 +53,9 @@ def main():
     #Predict the response for test dataset
     y_pred = model.predict(x_test)
 
+    print(x_test)
+    print("Prefictions of the model: " + str(y_pred))
+
     # Model Accuracy
     print("Accuracy:",metrics.accuracy_score(y_test, y_pred)*100)
 
